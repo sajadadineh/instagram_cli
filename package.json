@@ -27,7 +27,10 @@
   },
   "homepage": "https://gitlab.com/sajadadineh/instagram-cli#readme",
   "dependencies": {
+    "chalk": "^4.0.0",
     "commander": "^5.1.0",
-    "instagram-private-api": "^1.40.1"
+    "instagram-private-api": "^1.40.1",
+    "leveldown": "^5.6.0",
+    "levelup": "^4.4.0"
   }
 }

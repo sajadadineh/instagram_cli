@@ -1,3 +1,13 @@
-"use strict";
+#!/usr/bin/env node
 
-console.log("hi");
+const { IgApiClient } = require("instagram-private-api");
+
+const ig = new IgApiClient();
+
+ig.state.generateDevice("username");
+
+(async () => {
+  await ig.simulate.preLoginFlow();
+  await ig.account.login("username", "password");
+  console.log("The user logged in")
+})();

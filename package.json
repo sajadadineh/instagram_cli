@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "With this program, you can connect to your Instagram in cli and do your work.",
   "main": "index.js",
+  "bin": {
+    "instagram": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,10 +16,17 @@
   "keywords": [
     "instagram"
   ],
-  "author": "sajad adineh",
+  "author": {
+    "name": "sajad adineh",
+    "email": "sajadadineh@protonmail.com",
+    "url": "sajadadineh.ir"
+  },
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://gitlab.com/sajadadineh/instagram-cli/issues"
   },
-  "homepage": "https://gitlab.com/sajadadineh/instagram-cli#readme"
+  "homepage": "https://gitlab.com/sajadadineh/instagram-cli#readme",
+  "dependencies": {
+    "instagram-private-api": "^1.40.1"
+  }
 }

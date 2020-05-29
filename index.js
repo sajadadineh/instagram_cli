@@ -6,7 +6,6 @@ const { program } = require('commander');
 const chalk = require('chalk')
 const levelup = require('levelup');
 const leveldown = require('leveldown');
-const R = require('ramda')
 const prompt = require('prompt'),
       optimist = require('optimist')
 
@@ -31,7 +30,7 @@ program
                 console.log(chalk_blue(data.key.toString()) ,'=', chalk_green( data.value.toString()))
             })
             .on('error', function (err) {
-                console.log(chalk_red("db is null ")+err)
+                console.log(err)
             })
     })
 
@@ -48,8 +47,9 @@ program
                 db.get('username'),
                 db.get('password')
             ])
+            .then(arr => arr.map(element => element.toString())) // fix by iman ghvs
             .then((arr)=>{
-                checkUsernameAndPassword(arr[0].toString(),arr[1].toString())
+                checkUsernameAndPassword(arr[0],arr[1])
             })
           })
     })
@@ -68,8 +68,10 @@ program
                 db.get("password"),
                 db.get("id"),
                 db.get("message"),
-            ]).then((arr)=>{
-                processing(arr[0].toString(),arr[1].toString(),arr[2].toString(),arr[3].toString())
+            ])
+            .then(arr => arr.map(element => element.toString()))
+            .then((arr)=>{
+                processing(arr[0],arr[1],arr[2],arr[3])
             })
           })
     })

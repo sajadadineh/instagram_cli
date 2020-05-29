@@ -15,7 +15,7 @@ this program is for those who want to direct a message on Instagram using the te
 
 2.clone the project `git clone https://gitlab.com/sajadadineh/instagram-cli.git`
 
-3.go to the directory and execute the command and install program `sudo npm i -g ./`
+3.go to the directory `cd instagram-cli` and execute the command and install program `sudo npm i -g ./`
 
 4.login in instagram `instagram login`
 

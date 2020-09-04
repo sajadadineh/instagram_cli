@@ -13,7 +13,7 @@ this program is for those who want to direct a message on Instagram using the te
 
 1.install node 12.16.3 , npm
 
-2.clone the project `git clone https://gitlab.com/sajadadineh/instagram-cli.git`
+2.clone the project `git clone https://github.com/sajadadineh/instagram-cli.git`
 
 3.go to the directory `cd instagram-cli` and execute the command and install program `sudo npm i -g ./`
 
